@@ -1,1 +1,1 @@
-cat $1 |fmt -1
+cat $1 |fmt -1|tr '[:upper:]''[:lower:]'|uniqu|sed -e's/\.//g'|sort |comm - ./dictionary -2 -3 
